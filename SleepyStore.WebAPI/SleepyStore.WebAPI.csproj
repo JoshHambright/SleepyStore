@@ -307,6 +307,20 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SleepyStore.Data\SleepyStore.Data.csproj">
+      <Project>{73a85aa6-1418-4758-8469-ed553d239f97}</Project>
+      <Name>SleepyStore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SleepyStore.Models\SleepyStore.Models.csproj">
+      <Project>{0ee707d8-afc5-459c-ba1a-90099ee9e477}</Project>
+      <Name>SleepyStore.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SleepyStore.Services\SleepyStore.Services.csproj">
+      <Project>{df0a0eca-c625-45ee-895b-58a4133d2045}</Project>
+      <Name>SleepyStore.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
