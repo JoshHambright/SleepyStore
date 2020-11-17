@@ -218,14 +218,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011171543061_InitialCreate.cs" />
-    <Compile Include="Migrations\202011171543061_InitialCreate.designer.cs">
-      <DependentUpon>202011171543061_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171823389_Stf.cs" />
-    <Compile Include="Migrations\202011171823389_Stf.designer.cs">
-      <DependentUpon>202011171823389_Stf.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
