@@ -15,5 +15,6 @@ namespace SleepyStore.Data
         public DateTime CreatedUtc { get; set; }
         public DateTime? UpdatedUtc { get; set; }
         public virtual List<Item> Items { get; set; } = new List<Item>();
+
     }
 }

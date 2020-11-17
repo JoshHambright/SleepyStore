@@ -1,4 +1,4 @@
-namespace SleepyStore.WebAPI.Migrations
+﻿namespace SleepyStore.WebAPI.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
