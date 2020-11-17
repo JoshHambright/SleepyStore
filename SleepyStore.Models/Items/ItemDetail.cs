@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SleepyStore.Models.Categories
+namespace SleepyStore.Models.Items
 {
     public class ItemDetail
     {

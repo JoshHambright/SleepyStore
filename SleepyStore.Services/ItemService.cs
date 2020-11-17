@@ -1,5 +1,6 @@
 ﻿using SleepyStore.Data;
-using SleepyStore.Models.Categories;
+using SleepyStore.Models;
+using SleepyStore.Models.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
