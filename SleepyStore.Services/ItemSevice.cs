@@ -32,5 +32,17 @@ namespace SleepyStore.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteItem(int itemId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Items
+                    .Single(e => e.ItemId == itemId);
+                ctx.Items.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
