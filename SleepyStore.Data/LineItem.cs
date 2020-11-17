@@ -12,10 +12,9 @@ namespace SleepyStore.Data
     {
         [Key]
         public int LineItemID { get; set; }
-
         [ForeignKey(nameof(Order))]
-
         public int OrderNumber { get; set; }
+        public virtual Order Order { get; set; }
         [ForeignKey(nameof(Item))]
         public int ItemID { get; set; }
         public virtual Item Item { get; set; }

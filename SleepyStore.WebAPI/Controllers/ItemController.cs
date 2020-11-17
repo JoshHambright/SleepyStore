@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
+using SleepyStore.Models;
 using SleepyStore.Models.Categories;
+using SleepyStore.Models.Items;
 using SleepyStore.Services;
 using System;
 using System.Collections.Generic;
