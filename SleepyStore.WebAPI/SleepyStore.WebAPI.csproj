@@ -212,6 +212,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011170141377_InitialCreate.cs" />
+    <Compile Include="Migrations\202011170141377_InitialCreate.Designer.cs">
+      <DependentUpon>202011170141377_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -321,6 +326,11 @@
       <Project>{df0a0eca-c625-45ee-895b-58a4133d2045}</Project>
       <Name>SleepyStore.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011170141377_InitialCreate.resx">
+      <DependentUpon>202011170141377_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
