@@ -76,11 +76,11 @@ namespace SleepyStore.Services
 
 
 
+
         public ItemDetail GetItemByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-
                 var model =
                     ctx
                         .Items
@@ -96,7 +96,7 @@ namespace SleepyStore.Services
                     };
             }
         }
-
+      
         public bool DeleteItem(int itemId)
         {
             using (var ctx = new ApplicationDbContext())
@@ -108,6 +108,9 @@ namespace SleepyStore.Services
 
                 return ctx.SaveChanges() == 1;
             }
+
+
         }
+
     }
 }
