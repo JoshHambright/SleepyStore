@@ -56,7 +56,7 @@ namespace SleepyStore.Services
         }
 
         //Get Category by ID
-        public CategoryDetail GetCats(int id)
+        public CategoryDetail GetCat(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

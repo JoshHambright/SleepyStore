@@ -22,7 +22,6 @@ namespace SleepyStore.Data
         [Required]
         public Guid UserID { get; set; }
         //public virtual Product Product { get; set; }
-        //
         public virtual List<LineItem> LineItems { get; set; } = new List<LineItem>();
     }
         public enum Status
