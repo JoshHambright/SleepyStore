@@ -25,8 +25,8 @@ namespace SleepyStore.Data
 
         //Remove Comments Below to link Item and Category Tables
         //public double Rating { get; set; }
-        //[ForeignKey(nameof(Category))]
+        [ForeignKey(nameof(Category))]
         public int CategoryID { get; set; }
-        //public virtual Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

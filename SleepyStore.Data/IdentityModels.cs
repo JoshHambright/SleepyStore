@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -38,8 +39,18 @@ namespace SleepyStore.Data
         public DbSet<Category> Categories { get; set; } //<--- Categories DBSet
         public DbSet<Order> Orders { get; set; } //<--- Categories DBSet
         //public DbSet<OrderLine> OrderLines { get; set; } //<--- Order Lines DBSet
+        
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Conventions
+                .Remove<PluralizingTableNameConvention>();
 
-
+            modelBuilder
+                    .Configurations
+                    .Add(new IdentityUserLoginConfiguration())
+                    .Add(new IdentityUserRoleConfiguration());
+        }
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {
