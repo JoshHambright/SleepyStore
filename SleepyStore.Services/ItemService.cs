@@ -54,26 +54,22 @@ namespace SleepyStore.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<ItemDetail> GetItemDetails()
+        public IEnumerable<ItemListItems> GetItems()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx
                     .Items
-                    .Select(e => new ItemDetail
+                    .Where(e => e.InStock == true)
+                    .Select(
+                    e => new ItemListItems
                     {
                         ItemId = e.ItemId,
-                        Name = e.Name,
-                        Description = e.Description,
-                        Price = e.Price,
-                        Inventory = e.Inventory,
-                        CreatedUtc = e.CreatedUtc
+                        Name = e.Name
                     });
                 return query.ToArray();
             }
         }
-
-
 
 
 
