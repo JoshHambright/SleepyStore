@@ -56,7 +56,7 @@
   <ItemGroup>
     <Compile Include="Categories\CategoryCreate.cs" />
     <Compile Include="Categories\CategoryDetail.cs" />
-    <Compile Include="Categories\CategoryList.cs" />
+    <Compile Include="Categories\CategoryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

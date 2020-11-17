@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using SleepyStore.Models;
+using SleepyStore.Services;
 
 namespace SleepyStore.WebAPI.Controllers
 {
@@ -21,13 +23,13 @@ namespace SleepyStore.WebAPI.Controllers
         //CREATE
         //Create New Category
 
-        public IHttpActionResult Category(CatCreate cat)
+        public IHttpActionResult Category(CategoryCreate cat)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var service = CreateCategoryService();
 
-            if (!service.CreatePost(cat))
+            if (!service.CreateCat(cat))
                 return InternalServerError();
             return Ok();
         }
@@ -37,7 +39,7 @@ namespace SleepyStore.WebAPI.Controllers
         public IHttpActionResult Get()
         {
             CategoryService categoryService = CreateCategoryService();
-            var categories = categoryService.GetPosts();
+            var categories = categoryService.GetCats();
             return Ok(categories);
         }
 
@@ -45,7 +47,7 @@ namespace SleepyStore.WebAPI.Controllers
         public IHttpActionResult Get(int id)
         {
             CategoryService categoryService = CreateCategoryService();
-            var category = categoryService.GetPosts(id);
+            var category = categoryService.GetCats(id);
             return Ok(category);
         }
     }

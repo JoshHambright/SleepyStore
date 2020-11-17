@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SleepyStore.Models.Categories
 {
-    public class CategoryList
+    public class CategoryListItem
     {
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
