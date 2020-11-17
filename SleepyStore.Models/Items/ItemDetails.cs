@@ -15,6 +15,5 @@ namespace SleepyStore.Models.Items
         public double Price { get; set; }
         public int Inventory { get; set; }
         public DateTime CreatedUtc { get; set; }
-        public DateTime UpdatedUtc { get; set; }
     }
 }
