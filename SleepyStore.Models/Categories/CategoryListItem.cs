@@ -12,6 +12,7 @@ namespace SleepyStore.Models.Categories
         public string CategoryName { get; set; }
 
 
+
     }   
 
 }

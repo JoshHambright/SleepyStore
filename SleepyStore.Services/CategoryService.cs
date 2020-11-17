@@ -71,6 +71,7 @@ namespace SleepyStore.Services
                         CategoryID = cat.CategoryID,
                         CategoryName = cat.CategoryName,
                         CreatedUtc = cat.CreatedUtc,
+
                         //UpdatedUtc? = cat.UpdatedUtc,
                         //Items = cat.Items.Select ( 
                         // FUNCTION FOR CONVERTING VIRTUAL LIST OF ITEMS TO REAL LIST ).ToList()

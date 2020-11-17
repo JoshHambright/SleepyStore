@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryService.cs" />
-    <Compile Include="ItemSevice.cs" />
+    <Compile Include="ItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SleepyStore.Data\SleepyStore.Data.csproj">
-      <Project>{73a85aa6-1418-4758-8469-ed553d239f97}</Project>
       <Project>{73A85AA6-1418-4758-8469-ED553D239F97}</Project>
       <Name>SleepyStore.Data</Name>
     </ProjectReference>
