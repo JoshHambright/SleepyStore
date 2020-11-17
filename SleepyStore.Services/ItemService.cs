@@ -56,13 +56,13 @@ namespace SleepyStore.Services
         }
 
 
-        public IEnumerable<ItemDetails> GetItemDetails()
+        public IEnumerable<ItemDetail> GetItemDetails()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx
                     .Items
-                    .Select(e => new ItemDetails
+                    .Select(e => new ItemDetail
                     {
                         ItemId = e.ItemId,
                         Name = e.Name,
@@ -88,4 +88,25 @@ namespace SleepyStore.Services
 
 
         }
+
+        public ItemDetail GetItemByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var model =
+                    ctx
+                        .Items
+                        .Single(i => i.ItemId == id);
+                return
+                    new ItemDetail
+                    {
+                        Name = model.Name,
+                        Description = model.Description,
+                        Price = model.Price,
+                        Inventory = model.Inventory,
+                        CreatedUtc = DateTime.Now
+                    };
+            }
+        }
+    }
 }
