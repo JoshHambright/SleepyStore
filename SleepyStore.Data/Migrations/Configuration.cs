@@ -10,6 +10,7 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "SleepyStore.Data.ApplicationDbContext";
         }
 
         protected override void Seed(SleepyStore.Data.ApplicationDbContext context)

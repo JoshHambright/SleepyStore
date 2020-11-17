@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
+using SleepyStore.Data;
 using SleepyStore.WebAPI.Models;
 
 namespace SleepyStore.WebAPI
