@@ -1,4 +1,6 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -32,7 +34,7 @@ namespace SleepyStore.Data
 
         //Comment lines out as data objects are created
 
-        //public DbSet<Item> Items { get; set; } //<--- Items DBSet
+        public DbSet<Item> Items { get; set; } //<--- Items DBSet
         //public DbSet<Category> Categories { get; set; } //<--- Categories DBSet
         //public DbSet<Order> Orders { get; set; } //<--- Categories DBSet
         //public DbSet<OrderLine> OrderLines { get; set; } //<--- Order Lines DBSet
