@@ -54,10 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categories\CategoryCreate.cs" />
+    <Compile Include="Categories\CategoryDetail.cs" />
+    <Compile Include="Categories\CategoryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Categories\" />
     <Folder Include="Items\" />
     <Folder Include="Orders\LineItems\" />
   </ItemGroup>
