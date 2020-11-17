@@ -23,6 +23,7 @@ namespace SleepyStore.Data
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
 
+        //Remove Comments Below to link Item and Category Tables
         //public double Rating { get; set; }
         //[ForeignKey(nameof(Category))]
         public int CategoryID { get; set; }
