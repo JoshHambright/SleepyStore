@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SleepyStore.Models.Items
 {
-    class ItemDetails
+    public class ItemDetails
     {
       
         public int ItemId { get; set; }
