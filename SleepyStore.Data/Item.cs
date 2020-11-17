@@ -20,6 +20,20 @@ namespace SleepyStore.Data
         public double Price { get; set; }
         [Required]
         public int Inventory { get; set; }
+        public bool InStock
+        {
+            get
+            {
+                if (Inventory >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
         public DateTime CreatedUtc { get; set; }
         public DateTime? UpdatedUtc { get; set; }
 
