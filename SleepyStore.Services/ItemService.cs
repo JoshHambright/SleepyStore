@@ -55,27 +55,37 @@ namespace SleepyStore.Services
             }
         }
 
-        public ItemDetail GetItemByID(int id)
+
+        public IEnumerable<ItemDetails> GetItemDetails()
         {
             using (var ctx = new ApplicationDbContext())
             {
-
-                var model =
-                    ctx
-                        .Items
-                        .Single(i => i.ItemId == id);
-                return
-                    new ItemDetail
+                var query = ctx
+                    .Items
+                    .Select(e => new ItemDetails
                     {
-                        Name = model.Name,
-                        Description = model.Description,
-                        Price = model.Price,
-                        Inventory = model.Inventory,
-                        CreatedUtc = DateTime.Now
-                    };
+                        ItemId = e.ItemId,
+                        Name = e.Name,
+                        Description = e.Description,
+                        Price = e.Price,
+                        Inventory = e.Inventory,
+                        CreatedUtc = e.CreatedUtc
+                    });
+                return query.ToArray();
             }
         }
+        public bool DeleteItem(int itemId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Items
+                    .Single(e => e.ItemId == itemId);
+                ctx.Items.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
 
 
-    }
+        }
 }
