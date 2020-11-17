@@ -19,5 +19,7 @@ namespace SleepyStore.Models
         public double Price { get; set; }
         [Required]
         public int Inventory { get; set; }
+        [Required]
+        public int CategoryID { get; set; }
     }
 }

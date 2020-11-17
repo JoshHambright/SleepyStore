@@ -24,6 +24,7 @@ namespace SleepyStore.Services
             var entity = new Item()
             {
                 Name = model.Name,
+                CategoryID = model.CategoryID,
                 Description = model.Description,
                 Price = model.Price,
                 Inventory = model.Inventory,
@@ -50,6 +51,7 @@ namespace SleepyStore.Services
                 entity.Price = model.Price;
                 entity.Inventory = model.Inventory;
                 entity.UpdatedUtc = DateTime.Now;
+                entity.CategoryID = model.CategoryID;
 
                 return ctx.SaveChanges() == 1;
             }
@@ -65,7 +67,8 @@ namespace SleepyStore.Services
                     e => new ItemListItems
                     {
                         ItemId = e.ItemId,
-                        Name = e.Name
+                        Name = e.Name,
+                        CategoryID = e.CategoryID
                     });
                 return query.ToArray();
             }
@@ -84,10 +87,13 @@ namespace SleepyStore.Services
                 return
                     new ItemDetail
                     {
+                        ItemId = model.ItemId,
                         Name = model.Name,
                         Description = model.Description,
                         Price = model.Price,
                         Inventory = model.Inventory,
+                        CategoryID = model.CategoryID,
+                        CategoryName = model.Category.CategoryName,
                         CreatedUtc = DateTime.Now
                     };
             }

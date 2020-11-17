@@ -13,6 +13,8 @@ namespace SleepyStore.Models.Items
         public string Description { get; set; }
         public double Price { get; set; }
         public int Inventory { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
         public DateTime CreatedUtc { get; set; }
     }
 }
