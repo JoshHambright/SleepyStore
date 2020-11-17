@@ -36,7 +36,7 @@ namespace SleepyStore.Data
 
         public DbSet<Item> Items { get; set; } //<--- Items DBSet
         public DbSet<Category> Categories { get; set; } //<--- Categories DBSet
-        //public DbSet<Order> Orders { get; set; } //<--- Categories DBSet
+        public DbSet<Order> Orders { get; set; } //<--- Categories DBSet
         //public DbSet<OrderLine> OrderLines { get; set; } //<--- Order Lines DBSet
 
 
