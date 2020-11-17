@@ -20,8 +20,8 @@ namespace SleepyStore.Data
         public double Price { get; set; }
         [Required]
         public int Inventory { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Updated { get; set; }
+        public DateTime CreatedUtc { get; set; }
+        public DateTime? UpdatedUtc { get; set; }
 
         //Remove Comments Below to link Item and Category Tables
         //public double Rating { get; set; }
