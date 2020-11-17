@@ -62,6 +62,7 @@
     <Compile Include="Categories\CategoryListItem.cs" />
     <Compile Include="Categories\ItemCreate.cs" />
     <Compile Include="Categories\ItemDetail.cs" />
+    <Compile Include="Categories\ItemEdit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

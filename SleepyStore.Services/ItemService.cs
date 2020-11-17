@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SleepyStore.Services
 {
-    class ItemService
+    public class ItemService
     {
         //GUID
         private readonly Guid _userId;
@@ -31,6 +31,26 @@ namespace SleepyStore.Services
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Items.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool UpdateItem(ItemEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Items
+                        .Single(e => e.ItemId == model.ItemId);
+
+                entity.ItemId = model.ItemId;
+                entity.Name = model.Name;
+                entity.Description = model.Description;
+                entity.Price = model.Price;
+                entity.Inventory = model.Inventory;
+                entity.UpdatedUtc = DateTime.Now;
+
                 return ctx.SaveChanges() == 1;
             }
         }
