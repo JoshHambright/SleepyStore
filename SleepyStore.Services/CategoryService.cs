@@ -1,6 +1,7 @@
 ﻿using SleepyStore.Data;
 using SleepyStore.Models;
 using SleepyStore.Models.Categories;
+using SleepyStore.Models.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,9 +72,17 @@ namespace SleepyStore.Services
                         CategoryID = cat.CategoryID,
                         CategoryName = cat.CategoryName,
                         CreatedUtc = cat.CreatedUtc,
-                        UpdatedUtc = cat.UpdatedUtc,
-                        //Items = cat.Items.Select ( 
-                        // FUNCTION FOR CONVERTING VIRTUAL LIST OF ITEMS TO REAL LIST ).ToList()
+                        //UpdatedUtc? = cat.UpdatedUtc,
+                        Items = cat.Items.Select(
+                            e =>
+                            new ItemListItems
+                            {
+                                ItemId = e.ItemId,
+                                Name = e.Name,
+                                Price = e.Price,
+                                Inventory = e.Inventory
+                            }
+                            ).ToList()
                     };
             }
         }

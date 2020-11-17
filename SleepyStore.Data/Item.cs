@@ -20,13 +20,27 @@ namespace SleepyStore.Data
         public double Price { get; set; }
         [Required]
         public int Inventory { get; set; }
+        public bool InStock
+        {
+            get
+            {
+                if (Inventory >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
         public DateTime CreatedUtc { get; set; }
         public DateTime? UpdatedUtc { get; set; }
 
         //Remove Comments Below to link Item and Category Tables
         //public double Rating { get; set; }
-        //[ForeignKey(nameof(Category))]
+        [ForeignKey(nameof(Category))]
         public int CategoryID { get; set; }
-        //public virtual Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
