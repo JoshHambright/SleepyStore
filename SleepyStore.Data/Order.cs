@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,9 @@ namespace SleepyStore.Data
 {
     public class Order
     {
+        [Key]
         public int OrderNumber { get; set; }
+        [Required]
         public double OrderTotal { get; set; }
 
 
