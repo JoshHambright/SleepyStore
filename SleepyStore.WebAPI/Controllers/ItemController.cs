@@ -60,5 +60,12 @@ namespace SleepyStore.WebAPI.Controllers
             return Ok(category);
         }
 
+        //Get All Items
+        public IHttpActionResult Get()
+        {
+            ItemService itemService = CreateItemService();
+            var categories = itemService.GetItems();
+            return Ok(categories);
+        }
     }
 }

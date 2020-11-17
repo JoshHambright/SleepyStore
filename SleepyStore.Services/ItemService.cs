@@ -62,7 +62,7 @@ namespace SleepyStore.Services
             {
                 var query = ctx
                     .Items
-                    .Where(e => e.InStock == true)
+                    .Where(e => e.Inventory >= 1)
                     .Select(
                     e => new ItemListItems
                     {
