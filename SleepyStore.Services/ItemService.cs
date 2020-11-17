@@ -1,5 +1,6 @@
 ﻿using SleepyStore.Data;
-using SleepyStore.Models.Categories;
+using SleepyStore.Models;
+using SleepyStore.Models.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,6 @@ namespace SleepyStore.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-
         public bool UpdateItem(ItemEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -54,8 +54,6 @@ namespace SleepyStore.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-
-
         public IEnumerable<ItemDetail> GetItemDetails()
         {
             using (var ctx = new ApplicationDbContext())
@@ -74,20 +72,10 @@ namespace SleepyStore.Services
                 return query.ToArray();
             }
         }
-        public bool DeleteItem(int itemId)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity = ctx
-                    .Items
-                    .Single(e => e.ItemId == itemId);
-                ctx.Items.Remove(entity);
-
-                return ctx.SaveChanges() == 1;
-            }
 
 
-        }
+
+
 
         public ItemDetail GetItemByID(int id)
         {
@@ -108,5 +96,21 @@ namespace SleepyStore.Services
                     };
             }
         }
+      
+        public bool DeleteItem(int itemId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Items
+                    .Single(e => e.ItemId == itemId);
+                ctx.Items.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+
+
+        }
+
     }
 }

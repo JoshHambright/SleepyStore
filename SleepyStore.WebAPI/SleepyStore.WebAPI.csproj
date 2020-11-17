@@ -422,9 +422,6 @@
     <EmbeddedResource Include="Migrations\202011171543061_InitialCreate.resx">
       <DependentUpon>202011171543061_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171823389_Stf.resx">
-      <DependentUpon>202011171823389_Stf.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

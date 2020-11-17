@@ -60,10 +60,9 @@
     <Compile Include="Categories\CategoryCreate.cs" />
     <Compile Include="Categories\CategoryDetail.cs" />
     <Compile Include="Categories\CategoryListItem.cs" />
-
-    <Compile Include="Categories\ItemEdit.cs" />
     <Compile Include="Items\ItemCreate.cs" />
-    <Compile Include="Items\ItemDetails.cs" />
+    <Compile Include="Items\ItemDetail.cs" />
+    <Compile Include="Items\ItemEdit.cs" />
     <Compile Include="Items\ItemListItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
