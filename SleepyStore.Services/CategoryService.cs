@@ -79,7 +79,8 @@ namespace SleepyStore.Services
                             {
                                 ItemId = e.ItemId,
                                 Name = e.Name,
-                                Price = e.Price
+                                Price = e.Price,
+                                Inventory = e.Inventory
                             }
                             ).ToList()
                     };

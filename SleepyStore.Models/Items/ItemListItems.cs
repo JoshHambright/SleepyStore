@@ -12,6 +12,6 @@ namespace SleepyStore.Models.Items
         public string Name { get; set; }
         public double Price { get; set; }
         public int CategoryID { get; set; }
-
+        public int Inventory { get; set; }
     }
 }

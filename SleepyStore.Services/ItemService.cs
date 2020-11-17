@@ -68,6 +68,7 @@ namespace SleepyStore.Services
                     {
                         ItemId = e.ItemId,
                         Name = e.Name,
+                        Inventory = e.Inventory,
                         CategoryID = e.CategoryID
                     });
                 return query.ToArray();
