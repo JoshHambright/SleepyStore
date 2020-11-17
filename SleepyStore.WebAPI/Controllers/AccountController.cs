@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using SleepyStore.Data;
 using SleepyStore.WebAPI.Models;
 using SleepyStore.WebAPI.Providers;
 using SleepyStore.WebAPI.Results;

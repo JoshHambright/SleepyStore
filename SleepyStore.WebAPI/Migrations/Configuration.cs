@@ -5,7 +5,7 @@ namespace SleepyStore.WebAPI.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SleepyStore.WebAPI.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SleepyStore.Data.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -13,13 +13,13 @@ namespace SleepyStore.WebAPI.Migrations
             ContextKey = "SleepyStore.WebAPI.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(SleepyStore.WebAPI.Models.ApplicationDbContext context)
-        {
+        //protected override void Seed(SleepyStore.WebAPI.Models.ApplicationDbContext context)
+        //{
             //  This method will be called after migrating to the latest version.
 
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-        }
+        //}
     }
 }
