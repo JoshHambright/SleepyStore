@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0EE707D8-AFC5-459C-BA1A-90099EE9E477}</ProjectGuid>
+    <ProjectGuid>{DF0A0ECA-C625-45EE-895B-58A4133D2045}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SleepyStore.Models</RootNamespace>
-    <AssemblyName>SleepyStore.Models</AssemblyName>
+    <RootNamespace>SleepyStore.Services</RootNamespace>
+    <AssemblyName>SleepyStore.Services</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -57,18 +57,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categories\CategoryCreate.cs" />
-    <Compile Include="Categories\CategoryDetail.cs" />
-    <Compile Include="Categories\CategoryListItem.cs" />
-    <Compile Include="Items\ItemCreate.cs" />
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="ItemSevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Orders\LineItems\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SleepyStore.Data\SleepyStore.Data.csproj">
+      <Project>{73a85aa6-1418-4758-8469-ed553d239f97}</Project>
+      <Name>SleepyStore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SleepyStore.Models\SleepyStore.Models.csproj">
+      <Project>{0ee707d8-afc5-459c-ba1a-90099ee9e477}</Project>
+      <Name>SleepyStore.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
