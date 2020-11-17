@@ -60,10 +60,10 @@
     <Compile Include="Categories\CategoryCreate.cs" />
     <Compile Include="Categories\CategoryDetail.cs" />
     <Compile Include="Categories\CategoryListItem.cs" />
+    <Compile Include="Items\ItemCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Items\" />
     <Folder Include="Orders\LineItems\" />
   </ItemGroup>
   <ItemGroup>

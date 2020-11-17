@@ -13,10 +13,13 @@ namespace SleepyStore.Data
         public int OrderNumber { get; set; }
         [Required]
         public double OrderTotal { get; set; }
+        [Required]
         public Status OrderStatus { get; set; }
+
         public DateTime OrderedUtc { get; set; }
         public DateTime CreatedUtc { get; set; }
-        public DateTime LastUpdatedUtc { get; set; }
+        public DateTime? LastUpdatedUtc { get; set; }
+        [Required]
         public Guid UserID { get; set; }
         //public virtual Product Product { get; set; }
         //public virtual List<LineItem> LineItems { get; set; } = new List<LineItem>()
