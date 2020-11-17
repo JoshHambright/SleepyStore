@@ -54,13 +54,13 @@ namespace SleepyStore.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<ItemDetails> GetItemDetails()
+        public IEnumerable<ItemDetail> GetItemDetails()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx
                     .Items
-                    .Select(e => new ItemDetails
+                    .Select(e => new ItemDetail
                     {
                         ItemId = e.ItemId,
                         Name = e.Name,
