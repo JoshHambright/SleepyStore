@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using SleepyStore.WebAPI.Providers;
 using SleepyStore.WebAPI.Models;
+using SleepyStore.Data;
 
 namespace SleepyStore.WebAPI
 {

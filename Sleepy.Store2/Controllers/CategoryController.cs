@@ -1,0 +1,55 @@
+﻿using Microsoft.AspNet.Identity;
+using SleepyStore.Models;
+using SleepyStore.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace Sleepy.Store2.Controllers
+{
+    public class CategoryController : ApiController
+    {
+        //Establish DB connection
+        private CategoryService CreateCategoryService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var categoryService = new CategoryService(userId);
+            return categoryService;
+        }
+
+        //CREATE
+        //Create New Category
+
+        public IHttpActionResult Category(CategoryCreate cat)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateCategoryService();
+
+            if (!service.CreateCat(cat))
+                return InternalServerError();
+            return Ok();
+        }
+
+        //READ
+        //Get All Categories
+        public IHttpActionResult Get()
+        {
+            CategoryService categoryService = CreateCategoryService();
+            var categories = categoryService.GetCats();
+            return Ok(categories);
+        }
+
+        //Get Category By ID
+        public IHttpActionResult Get(int id)
+        {
+            CategoryService categoryService = CreateCategoryService();
+            var category = categoryService.GetCat(id);
+            return Ok(category);
+        }
+    }
+}
+

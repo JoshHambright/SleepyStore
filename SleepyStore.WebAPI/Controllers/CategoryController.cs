@@ -47,7 +47,7 @@ namespace SleepyStore.WebAPI.Controllers
         public IHttpActionResult Get(int id)
         {
             CategoryService categoryService = CreateCategoryService();
-            var category = categoryService.GetCats(id);
+            var category = categoryService.GetCat(id);
             return Ok(category);
         }
     }
