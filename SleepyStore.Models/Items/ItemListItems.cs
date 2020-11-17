@@ -10,5 +10,6 @@ namespace SleepyStore.Models.Items
     {
         public int ItemId { get; set; }
         public string Name { get; set; }
+        public double Price { get; set; }
     }
 }
